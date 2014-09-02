@@ -2,14 +2,14 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/home/irhspur/Lion/app/src/main/assets" >
+        <source path="/home/irhspur/lionPhoneDirectory/app/src/main/assets" >
             <file
                 name="lion.csv"
-                path="/home/irhspur/Lion/app/src/main/assets/lion.csv" />
+                path="/home/irhspur/lionPhoneDirectory/app/src/main/assets/lion.csv" />
         </source>
     </dataSet>
     <dataSet config="debug" >
-        <source path="/home/irhspur/Lion/app/src/debug/assets" />
+        <source path="/home/irhspur/lionPhoneDirectory/app/src/debug/assets" />
     </dataSet>
 
 </merger>
