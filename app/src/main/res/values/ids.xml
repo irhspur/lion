@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="searchBar" type="id"/>
+    <item name="searchButton" type="id"/>
+    <item name="resultView1" type="id"/>
+    <item name="resultView2" type="id"/>
+    <item name="resultView3" type="id"/>
+    <item name="resultView4" type="id"/>
+    <item name="resultView5" type="id"/>
+    <item name="resultView6" type="id"/>
+    <item name="listVew" type="id"/>
+
+</resources>

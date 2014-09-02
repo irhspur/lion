@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/home/irhspur/Lion/app/src/main/assets" >
+            <file
+                name="lion.csv"
+                path="/home/irhspur/Lion/app/src/main/assets/lion.csv" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/irhspur/Lion/app/src/debug/assets" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/irhspur/Lion/app/build/intermediates/pre-dexed/debug/opencsv-2.3-a732c4f5bb2ab5150be4c698c809b95e85dee02c.jar"
+        jar="/home/irhspur/Lion/app/libs/opencsv-2.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d"/>
+
+</pre-dex-items>

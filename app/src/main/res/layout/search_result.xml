@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@id/searchBar"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@id/searchButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Search"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@id/listVew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
