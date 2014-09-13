@@ -17,7 +17,7 @@ import utility.UtilityString;
 public class SearchBar extends Activity implements View.OnClickListener{
 
     Button search;
-    EditText input;
+    /*EditText input;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class SearchBar extends Activity implements View.OnClickListener{
 
     private void viewById(){
 
-        input = (EditText) findViewById(R.id.searchBar);
+        /*input = (EditText) findViewById(R.id.searchBar);*/
         search = (Button) findViewById(R.id.searchButton);
     }
 
@@ -39,16 +39,18 @@ public class SearchBar extends Activity implements View.OnClickListener{
         switch(view.getId())
         {
             case R.id.searchButton:
-                if(!UtilityString.isNUll(input.getText().toString())){
-                    Intent executeSearch = new Intent("android.intent.action.SEARCH_RESULT");
-                    executeSearch.putExtra("searchString",input.getText().toString());
-                    startActivity(executeSearch);
-                }
+                /*if(!UtilityString.isNUll(input.getText().toString())){*/
+//                    Intent executeSearch = new Intent("android.intent.action.SEARCH_RESULT");
+//                    executeSearch.putExtra("searchString",input.getText().toString());
+//                    startActivity(executeSearch);
+
+                      onSearchRequested();
+               /* }
                 else{
                     Toast t = Toast.makeText(getApplicationContext(), "Please enter the text to search", Toast.LENGTH_LONG);
                     t.show();
                     t.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-                }
+                }*/
                 break;
         }
     }

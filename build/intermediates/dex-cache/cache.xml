@@ -7,5 +7,11 @@
         jumboMode="false"
         revision="19.1.0"
         sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d"/>
+    <item
+        dex="/home/irhspur/lionPhoneDirectory/app/build/intermediates/pre-dexed/debug/opencsv-2.3-db00d184451d6fbd048fe1c92ef39eb963b239bf.jar"
+        jar="/home/irhspur/lionPhoneDirectory/app/libs/opencsv-2.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d"/>
 
 </pre-dex-items>
