@@ -4,5 +4,8 @@
     <string name="app_name">Lion</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="welcome_text">Welcome to Lion Phone Directory
+                                Search for your fellow lion</string>
 
 </resources>

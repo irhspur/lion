@@ -1,6 +1,8 @@
 package phonedirectory.lion.com.lion;
 
 import android.app.Activity;
+import android.app.ListActivity;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,66 +30,67 @@ import utility.UtilityString;
 /**
  * Created by irhspur on 8/10/14.
  */
-public class SearchResult extends Activity implements View.OnClickListener{
+public class SearchResult extends Activity /*implements View.OnClickListener*/{
 
     private TextView result[] = new TextView[6];
-    Button search;
-    EditText input;
+    /*Button search;
+    EditText input;*/
     ListView listView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_result);
 
         Intent intent = getIntent();
-        String searchString = (String)intent.getExtras().get("searchString");
-        int resultIndex = 0;
-        Toast t = Toast.makeText(getApplicationContext(), searchString, Toast.LENGTH_LONG);
-        t.show();
-        t.setGravity(Gravity.BOTTOM, 0, 0);
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String searchString = intent.getStringExtra(SearchManager.QUERY);
+            int resultIndex = 0;
+            Toast t = Toast.makeText(getApplicationContext(), searchString, Toast.LENGTH_LONG);
+            t.show();
+            t.setGravity(Gravity.BOTTOM, 0, 0);
 
-        viewById();
+            viewById();
 
-        search.setOnClickListener(this);
+            /*search.setOnClickListener(this);*/
 
-        List<String[]> list = new ArrayList<String[]>();
-        String next[];
-        final ArrayList<String> result = new ArrayList<String>();
+            List<String[]> list = new ArrayList<String[]>();
+            String next[];
+            final ArrayList<String> result = new ArrayList<String>();
 
-        try{
-            InputStreamReader csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
+            try {
+                InputStreamReader csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
 
-            CSVReader reader = new CSVReader(csvStreamReader);
-            for (;;) {
-                next = reader.readNext();
-                if (next != null) {
-                    list.add(next);
-                } else {
-                    break;
+                CSVReader reader = new CSVReader(csvStreamReader);
+                for (; ; ) {
+                    next = reader.readNext();
+                    if (next != null) {
+                        list.add(next);
+                    } else {
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            for (int i = 0; i < list.size(); i++) {
+                if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
+                    result.add(list.get(i)[3]);
                 }
             }
-        }catch(IOException e){
-            e.printStackTrace();
+            final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, result);
+            listView.setAdapter(adapter);
         }
-
-
-        for (int i = 0; i < list.size(); i++) {
-            if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
-                result.add(list.get(i)[3]);
-            }
-        }
-        final StableArrayAdapter adapter = new StableArrayAdapter(this,android.R.layout.simple_list_item_1,result);
-        listView.setAdapter(adapter);
     }
 
     private void viewById(){
-        search = (Button) findViewById(R.id.searchButton);
-        input = (EditText) findViewById(R.id.searchBar);
+      /*  search = (Button) findViewById(R.id.searchButton);
+        input = (EditText) findViewById(R.id.searchBar);*/
         listView = (ListView) findViewById(R.id.listVew);
     }
-
+/*
     @Override
     public void onClick(View view){
 
@@ -102,7 +105,7 @@ public class SearchResult extends Activity implements View.OnClickListener{
             t.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
        }
 
-    }
+    }*/
 
     private class StableArrayAdapter extends ArrayAdapter<String>{
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
