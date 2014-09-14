@@ -21,7 +21,7 @@ public class Splash extends Activity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally{
-                    Intent openMainActivity = new Intent ("android.intent.action.SEARCH_BAR");
+                    Intent openMainActivity = new Intent ("android.intent.action.SPLASH");
                     startActivity(openMainActivity);
                 }
             }
