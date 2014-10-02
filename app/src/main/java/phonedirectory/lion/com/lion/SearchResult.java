@@ -21,7 +21,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.InterruptedIOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,8 +37,8 @@ import utility.UtilityString;
 public class SearchResult extends ListActivity {
 
     ListView listView;
-    ArrayList<String> result = new ArrayList<String>();
-    ArrayList<String> index = new ArrayList<String>();
+    List<String[]> result = new ArrayList<String[]>();
+    ArrayList<String> populate = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +56,13 @@ public class SearchResult extends ListActivity {
                 e.printStackTrace();
             }
 
-            result = FileParse.getString(searchString, csvStreamReader, false); //Parse the file
+            result = FileParse.getString(searchString, csvStreamReader); //Parse the file to populate List<String[]>
 
-            InputStreamReader csvStreamReader1 = null;
-            try {
-                csvStreamReader1 = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
-            } catch (IOException e) {
-                e.printStackTrace();
+            for (int i=0; i < result.size(); i++) {
+                populate.add(result.get(i)[3]); //populate names
             }
-            index = FileParse.getString(searchString, csvStreamReader1, true);
-            final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, result);
+
+            final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, populate); //list out names
             setListAdapter(adapter);
         }
     }
@@ -73,11 +72,10 @@ public class SearchResult extends ListActivity {
 
         super.onListItemClick(l, v, position, id);
         Class displayClass = null;
-        System.out.println("Roop - " + index.get(position));
         try {
             displayClass = Class.forName("phonedirectory.lion.com.lion.Profile");
             Intent intent = new Intent(SearchResult.this, displayClass);
-            intent.putExtra("profileId", index.get(position));
+            intent.putExtra("profileId", result.get(position));
             startActivity(intent);
         }catch (ClassNotFoundException e) {
             e.printStackTrace();

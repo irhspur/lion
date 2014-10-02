@@ -6,38 +6,37 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 import phonedirectory.lion.com.lion.R;
 import utility.FileParse;
 
 public class Profile extends ActionBarActivity {
 
+    TextView name, address, phone, club, blood, email, mobile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        TextView address = (TextView) findViewById(R.id.address);
-
         Intent intent = getIntent();
-        String index = (String) intent.getExtras().get("profileId");
+        String[] index = (String[]) intent.getExtras().get("profileId");
 
-        TextView name = (TextView) findViewById(R.id.name);
-
-        InputStreamReader csvStreamReader = null;
-        try {
-            csvStreamReader = new InputStreamReader(Profile.this.getAssets().open("lion.csv"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ArrayList<String> test = FileParse.getInfoByIndex(csvStreamReader, index);
-        name.setText(test.get(3));
-        address.setText(test.get(5));
+        viewById();
+        phone.setText(index[6]);
+        club.setText(index[1]);
+        name.setText(index[3]);
+        address.setText(index[5]);
+        email.setText(index[8]);
+        blood.setText(index[9]);
+        mobile.setText(index[7]);
     }
 
 
@@ -62,5 +61,15 @@ public class Profile extends ActionBarActivity {
                 break;
         }
         return true;
+    }
+
+    private void viewById(){
+        name = (TextView) findViewById(R.id.name);
+        address = (TextView) findViewById(R.id.address);
+        phone = (TextView) findViewById(R.id.phone);
+        club = (TextView) findViewById(R.id.club);
+        blood = (TextView) findViewById(R.id.blood);
+        email = (TextView) findViewById(R.id.email);
+        mobile = (TextView) findViewById(R.id.mobile);
     }
 }

@@ -19,7 +19,7 @@
             android:text="@string/contact_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <View style="@style/Divider"
             android:layout_marginBottom="5dp"/>
@@ -44,8 +44,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/sample_info"
+            android:text="Home Phone not Available"
             android:id="@+id/phone"
+            android:padding="5dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Mobile not Available"
+            android:id="@+id/mobile"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="E-mail not Available"
+            android:id="@+id/email"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Blood Group not Available"
+            android:id="@+id/blood"
             android:padding="5dp" />
 
 
@@ -59,7 +83,9 @@
         <TextView
             android:text="@string/club_header"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
 
         <View style="@style/Divider"
             android:layout_marginBottom="5dp"/>
