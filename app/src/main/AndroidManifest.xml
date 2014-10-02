@@ -1,47 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="phonedirectory.lion.com.lion"
-    >
+    package="phonedirectory.lion.com.lion" >
 
     <application
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
-        <activity
-            android:name=".Splash">
+        <activity android:name=".Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".SearchBar">
+        <activity android:name=".SearchBar" >
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH_BAR"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.SEARCH_BAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="SearchResult">
+        <activity android:name=".SearchResult" >
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/search"/>
+                android:resource="@xml/search" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.SPLASH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.app.default_searchable"
-                       android:value=".SearchResult"/>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResult" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+            <intent-filter>
+                <action android:name="android.intent.action.PROFILE" />
+                <category android:name="andriod.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResult" />
         </activity>
     </application>
 

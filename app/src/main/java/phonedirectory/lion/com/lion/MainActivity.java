@@ -1,18 +1,20 @@
 package phonedirectory.lion.com.lion;
 
-import android.app.Activity;
-import android.app.SearchManager;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import utility.UtilityString;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

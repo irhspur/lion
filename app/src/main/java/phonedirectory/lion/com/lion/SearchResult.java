@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.InterruptedIOException;
@@ -25,87 +26,67 @@ import java.util.HashMap;
 import java.util.List;
 
 import au.com.bytecode.opencsv.CSVReader;
+import utility.FileParse;
 import utility.UtilityString;
 
 /**
  * Created by irhspur on 8/10/14.
  */
-public class SearchResult extends Activity /*implements View.OnClickListener*/{
+public class SearchResult extends ListActivity {
 
-    private TextView result[] = new TextView[6];
-    /*Button search;
-    EditText input;*/
     ListView listView;
+    ArrayList<String> result = new ArrayList<String>();
+    ArrayList<String> index = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search_result);
 
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String searchString = intent.getStringExtra(SearchManager.QUERY);
-            int resultIndex = 0;
-            Toast t = Toast.makeText(getApplicationContext(), searchString, Toast.LENGTH_LONG);
-            t.show();
-            t.setGravity(Gravity.BOTTOM, 0, 0);
-
+            String searchString = intent.getStringExtra(SearchManager.QUERY); //get query from search view
             viewById();
 
-            /*search.setOnClickListener(this);*/
-
-            List<String[]> list = new ArrayList<String[]>();
-            String next[];
-            final ArrayList<String> result = new ArrayList<String>();
-
+            InputStreamReader csvStreamReader = null;
             try {
-                InputStreamReader csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
-
-                CSVReader reader = new CSVReader(csvStreamReader);
-                for (; ; ) {
-                    next = reader.readNext();
-                    if (next != null) {
-                        list.add(next);
-                    } else {
-                        break;
-                    }
-                }
+                csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
+            result = FileParse.getString(searchString, csvStreamReader, false); //Parse the file
 
-            for (int i = 0; i < list.size(); i++) {
-                if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
-                    result.add(list.get(i)[3]);
-                }
+            InputStreamReader csvStreamReader1 = null;
+            try {
+                csvStreamReader1 = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+            index = FileParse.getString(searchString, csvStreamReader1, true);
             final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, result);
-            listView.setAdapter(adapter);
+            setListAdapter(adapter);
+        }
+    }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id){
+
+        super.onListItemClick(l, v, position, id);
+        Class displayClass = null;
+        System.out.println("Roop - " + index.get(position));
+        try {
+            displayClass = Class.forName("phonedirectory.lion.com.lion.Profile");
+            Intent intent = new Intent(SearchResult.this, displayClass);
+            intent.putExtra("profileId", index.get(position));
+            startActivity(intent);
+        }catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
     private void viewById(){
-      /*  search = (Button) findViewById(R.id.searchButton);
-        input = (EditText) findViewById(R.id.searchBar);*/
         listView = (ListView) findViewById(R.id.listVew);
     }
-/*
-    @Override
-    public void onClick(View view){
-
-        if(!UtilityString.isNUll(input.getText().toString())){
-            Intent executeSearch = new Intent ("android.intent.action.SEARCH_RESULT");
-            executeSearch.putExtra("searchString",input.getText().toString());
-            startActivity(executeSearch);
-        }
-        else{
-            Toast t = Toast.makeText(getApplicationContext(), "Please enter the text to search", Toast.LENGTH_LONG);
-            t.show();
-            t.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-       }
-
-    }*/
 
     private class StableArrayAdapter extends ArrayAdapter<String>{
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();

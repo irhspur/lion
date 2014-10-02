@@ -8,17 +8,17 @@
         revision="19.1.0"
         sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d"/>
     <item
-        dex="/home/irhspur/lionPhoneDirectory/app/build/intermediates/pre-dexed/debug/classes-16101e7d320ca5abbed18e41b195faacae5c7062.jar"
-        jar="/home/irhspur/lionPhoneDirectory/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/18.0.0/classes.jar"
+        dex="/home/irhspur/lionPhoneDirectory/app/build/intermediates/pre-dexed/debug/classes-7d20a5ebbbd798936ca420eb8d358909a2eb415c.jar"
+        jar="/home/irhspur/lionPhoneDirectory/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8f11f56e350eacabf2273f646d981356eea0ed77"/>
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
     <item
-        dex="/home/irhspur/lionPhoneDirectory/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-68e3bd4ca02cae3cfb5e63cadd1df05553706677.jar"
-        jar="/home/irhspur/Development/adt-bundle-linux-x86-20140321/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        dex="/home/irhspur/lionPhoneDirectory/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-50c5b3fa0d0761400d5f4b187053ea7b7e32d0c6.jar"
+        jar="/home/irhspur/Development/adt-bundle-linux-x86-20140321/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156"/>
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
     <item
         dex="/home/irhspur/Lion/app/build/intermediates/pre-dexed/debug/opencsv-2.3-a732c4f5bb2ab5150be4c698c809b95e85dee02c.jar"
         jar="/home/irhspur/Lion/app/libs/opencsv-2.3.jar"

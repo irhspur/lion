@@ -7,5 +7,10 @@
     <string name="action_search">Search</string>
     <string name="welcome_text">Welcome to Lion Phone Directory
                                 Search for your fellow lion</string>
+    <string name="title_activity_profile">Profile</string>
 
+    <!--Profile string variables-->
+    <string name="contact_header">Contact Details</string>
+    <string name="club_header">Club Details</string>
+    <string name="sample_info">Sample Details</string>
 </resources>
