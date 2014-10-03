@@ -72,4 +72,10 @@ public class Profile extends ActionBarActivity {
         email = (TextView) findViewById(R.id.email);
         mobile = (TextView) findViewById(R.id.mobile);
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        finish();
+    }
 }

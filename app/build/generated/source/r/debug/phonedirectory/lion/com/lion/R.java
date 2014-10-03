@@ -978,6 +978,7 @@ containing a value of this type.
         public static final int none=0x7f080009;
         public static final int normal=0x7f080000;
         public static final int phone=0x7f080048;
+        public static final int president=0x7f080050;
         public static final int progress_circular=0x7f080019;
         public static final int progress_horizontal=0x7f08001a;
         public static final int radio=0x7f080038;
@@ -999,6 +1000,7 @@ containing a value of this type.
         public static final int search_plate=0x7f08003f;
         public static final int search_src_text=0x7f080040;
         public static final int search_voice_btn=0x7f080044;
+        public static final int secratary=0x7f08004f;
         public static final int shortcut=0x7f080037;
         public static final int showCustom=0x7f080007;
         public static final int showHome=0x7f080004;
@@ -1012,6 +1014,7 @@ containing a value of this type.
         public static final int up=0x7f08002a;
         public static final int useLogo=0x7f080003;
         public static final int withText=0x7f080010;
+        public static final int z_chairman=0x7f080051;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f0a0000;
@@ -1043,10 +1046,11 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
         public static final int activity_profile=0x7f030019;
-        public static final int search_bar=0x7f03001a;
-        public static final int search_result=0x7f03001b;
-        public static final int splash=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int list_post_layout=0x7f03001a;
+        public static final int search_bar=0x7f03001b;
+        public static final int search_result=0x7f03001c;
+        public static final int splash=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;

@@ -21,7 +21,7 @@ public class FileParse {
 
         try {
 
-            CSVReader reader = new CSVReader(csvStreamReader);
+            CSVReader reader = new CSVReader(csvStreamReader,';');
             for (; ; ) {
                 next = reader.readNext();
                 if (next != null) {
@@ -29,11 +29,10 @@ public class FileParse {
                 } else {
                     break;
                 }
-
-                for (int i = 0; i < list.size(); i++) {
-                    if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
-                        result.add(list.get(i));
-                    }
+            }
+            for (int i = 0; i < list.size(); i++) {
+                if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
+                    result.add(list.get(i));
                 }
             }
 

@@ -1,33 +1,20 @@
 package phonedirectory.lion.com.lion;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.InterruptedIOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import au.com.bytecode.opencsv.CSVReader;
 import utility.FileParse;
 import utility.UtilityString;
 
@@ -47,11 +34,14 @@ public class SearchResult extends ListActivity {
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String searchString = intent.getStringExtra(SearchManager.QUERY); //get query from search view
+            String searchSelection = intent.getStringExtra("KEY");//get post to search
+            if(searchSelection == null)
+                searchSelection = "secretary";
             viewById();
 
             InputStreamReader csvStreamReader = null;
             try {
-                csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open("lion.csv"));
+                csvStreamReader = new InputStreamReader(SearchResult.this.getAssets().open(searchSelection + ".csv"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -72,6 +62,7 @@ public class SearchResult extends ListActivity {
 
         super.onListItemClick(l, v, position, id);
         Class displayClass = null;
+
         try {
             displayClass = Class.forName("phonedirectory.lion.com.lion.Profile");
             Intent intent = new Intent(SearchResult.this, displayClass);
@@ -97,9 +88,5 @@ public class SearchResult extends ListActivity {
             }
         }
     }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
+
 }

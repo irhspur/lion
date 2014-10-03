@@ -12,4 +12,8 @@ public class UtilityString {
     public static boolean isNUll(String input){
         return (input.equalsIgnoreCase("") || input.isEmpty() || input.equalsIgnoreCase(null));
     }
+
+    public static boolean isNotNull(String input){
+        return !isNUll(input);
+    }
 }
