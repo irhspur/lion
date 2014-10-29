@@ -53,7 +53,7 @@ public class ListByPost extends ListFragment {
             e.printStackTrace();
         }
 
-        result = FileParse.getString("lion", csvStreamReader); //Parse the file to populate List<String[]>
+        result = FileParse.getStringByPost(csvStreamReader); //Parse the file to populate List<String[]>
 
         for (int i=0; i < result.size(); i++) {
             populate.add(result.get(i)[3]); //populate names

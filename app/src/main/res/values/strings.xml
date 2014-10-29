@@ -13,4 +13,7 @@
     <string name="contact_header">Contact Details</string>
     <string name="club_header">Club Details</string>
     <string name="sample_info">Sample Details</string>
+    <string name="name_profile">Name</string>
+    <string name="address_title">Address</string>
+    <string name="phone_title">Phone</string>
 </resources>

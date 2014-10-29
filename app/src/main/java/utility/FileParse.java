@@ -43,6 +43,34 @@ public class FileParse {
         return result;
     }
 
+    public static List<String[]> getStringByPost(InputStreamReader csvStreamReader){
+
+        List<String[]> list = new ArrayList<String[]>();
+        String next[];
+        final List<String[]> result = new ArrayList<String[]>();
+
+        try {
+
+            CSVReader reader = new CSVReader(csvStreamReader,';');
+            for (; ; ) {
+                next = reader.readNext();
+                if (next != null) {
+                    list.add(next);
+                } else {
+                    break;
+                }
+            }
+            for (int i = 0; i < list.size(); i++) {
+                    result.add(list.get(i));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
 
 }
 
