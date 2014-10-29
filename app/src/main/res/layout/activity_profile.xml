@@ -9,6 +9,7 @@
     android:orientation="vertical"
     tools:context="phonedirectory.lion.com.lion.Profile">
 
+
     <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -20,7 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/contact_header"/>
+            android:id="@+id/contact_header"
+            android:textStyle="bold"
+            />
 
         <View style="@style/Divider"
             android:layout_marginBottom="5dp"
@@ -34,12 +37,14 @@
             android:text="@string/name_profile"
             android:id="@+id/name_title"
             android:padding="5dp"
-            android:layout_below="@id/divider_contact"/>
+            android:layout_below="@id/divider_contact"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/sample_info"
+            android:text="Name not available"
             android:id="@+id/name"
             android:padding="5dp"
             android:layout_below="@id/divider_contact"
@@ -52,13 +57,16 @@
             android:text="@string/address_title"
             android:id="@+id/address_title"
             android:padding="5dp"
-            android:layout_below="@id/name_title"/>
+            android:layout_below="@id/name_title"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/sample_info"
+            android:text="Address not available"
             android:id="@+id/address"
             android:padding="5dp"
             android:layout_below="@id/name"
@@ -71,7 +79,9 @@
             android:text="@string/phone_title"
             android:id="@+id/phone_title"
             android:padding="5dp"
-            android:layout_below="@id/address_title"/>
+            android:layout_below="@id/address_title"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,7 +101,9 @@
             android:text="Mobile"
             android:id="@+id/mobile_title"
             android:padding="5dp"
-            android:layout_below="@id/phone_title"/>
+            android:layout_below="@id/phone_title"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -110,7 +122,9 @@
             android:text="E-mail"
             android:id="@+id/email_title"
             android:padding="5dp"
-            android:layout_below="@id/mobile_title"/>
+            android:layout_below="@id/mobile_title"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -129,7 +143,9 @@
             android:text="Blood Group"
             android:id="@+id/blood_title"
             android:padding="5dp"
-            android:layout_below="@id/email_title"/>
+            android:layout_below="@id/email_title"
+            android:textStyle="bold"
+            android:background="@drawable/textview_back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -154,7 +170,9 @@
             android:text="@string/club_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+
             />
 
         <View style="@style/Divider"

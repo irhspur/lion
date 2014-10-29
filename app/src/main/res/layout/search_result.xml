@@ -10,6 +10,11 @@
         android:id="@id/listVew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:smoothScrollbar="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:fastScrollEnabled="true"
         />
 
 </LinearLayout>
