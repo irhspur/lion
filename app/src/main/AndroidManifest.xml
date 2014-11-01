@@ -2,20 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="phonedirectory.lion.com.lion" >
 
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
-        <!--<activity android:name=".Splash" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".Home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".SearchBar" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH_BAR" />
@@ -36,9 +39,9 @@
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAINACTIVITY" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
             <meta-data
@@ -50,6 +53,7 @@
             android:label="@string/title_activity_profile" >
             <intent-filter>
                 <action android:name="android.intent.action.PROFILE" />
+
                 <category android:name="andriod.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -57,5 +61,11 @@
                 android:name="android.app.default_searchable"
                 android:value=".SearchResult" />
         </activity>
+        <activity
+            android:name=".Newsletter"
+            android:label="@string/title_activity_newsletter"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
     </application>
+
 </manifest>

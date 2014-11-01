@@ -21,7 +21,7 @@
             />
         <item
             android:id="@+id/dg_team"
-            android:title="Distric Governor Team"
+            android:title="District Governor Team"
             />
         <item
             android:id="@+id/advisor"
