@@ -107,6 +107,26 @@
         android:layout_below="@id/divider_contact3"
         />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/call"
+            android:layout_toLeftOf="@+id/add_to_contacts"
+            android:background="@drawable/ic_action_call"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/divider_contact3"
+            />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_to_contacts"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_action_add_person"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/divider_contact3"
+    />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
