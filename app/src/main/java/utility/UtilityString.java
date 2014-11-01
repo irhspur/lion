@@ -10,7 +10,7 @@ public class UtilityString {
     }
 
     public static boolean isNUll(String input){
-        return (input.equalsIgnoreCase("") || input.isEmpty() || input.equalsIgnoreCase(null));
+        return (input.equalsIgnoreCase("") || input.isEmpty() || input.equalsIgnoreCase(null) || input.equalsIgnoreCase(" "));
     }
 
     public static boolean isNotNull(String input){

@@ -16,10 +16,11 @@ import java.util.List;
 
 import phonedirectory.lion.com.lion.R;
 import utility.FileParse;
+import utility.UtilityString;
 
 public class Profile extends ActionBarActivity {
 
-    TextView name, address, phone, club, blood, email, mobile;
+    TextView name, address, phone, club, blood, email, mobile, location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +31,21 @@ public class Profile extends ActionBarActivity {
         String[] index = (String[]) intent.getExtras().get("profileId");
 
         viewById();
-        phone.setText(index[6]);
-        club.setText(index[1]);
-        name.setText(index[3]);
-        address.setText(index[5]);
-        email.setText(index[8]);
-        blood.setText(index[9]);
-        mobile.setText(index[7]);
+
+        if(UtilityString.isNotNull(index[5]))
+            phone.setText(index[5]);
+        if(UtilityString.isNotNull(index[1]))
+            club.setText(index[1]);
+        if(UtilityString.isNotNull(index[2]))
+            name.setText(index[2]);
+        if(UtilityString.isNotNull(index[4]))
+            address.setText(index[4]);
+        if(UtilityString.isNotNull(index[7]))
+            email.setText(index[7]);
+        if(UtilityString.isNotNull(index[8]))
+            blood.setText(index[8]);
+        if(UtilityString.isNotNull(index[6]))
+            mobile.setText(index[6]);
     }
 
 

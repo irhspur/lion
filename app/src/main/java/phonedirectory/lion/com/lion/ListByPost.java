@@ -56,7 +56,7 @@ public class ListByPost extends ListFragment {
         result = FileParse.getStringByPost(csvStreamReader); //Parse the file to populate List<String[]>
 
         for (int i=0; i < result.size(); i++) {
-            populate.add(result.get(i)[3]); //populate names
+            populate.add(result.get(i)[2]); //populate names
         }
 
         final StableArrayAdapter adapter = new StableArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, populate); //list out names

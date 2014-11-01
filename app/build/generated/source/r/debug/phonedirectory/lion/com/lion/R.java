@@ -934,6 +934,7 @@ containing a value of this type.
         public static final int textview_back=0x7f02005b;
     }
     public static final class id {
+        public static final int ScrollView01=0x7f080046;
         public static final int action_bar=0x7f080025;
         public static final int action_bar_activity_content=0x7f080014;
         public static final int action_bar_container=0x7f080024;
@@ -945,26 +946,35 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f080015;
         public static final int action_menu_presenter=0x7f080016;
         public static final int action_mode_close_button=0x7f08002d;
-        public static final int action_search=0x7f080056;
+        public static final int action_search=0x7f08005b;
         public static final int activity_chooser_view_content=0x7f08002e;
-        public static final int address=0x7f08004b;
-        public static final int address_title=0x7f08004a;
+        public static final int address=0x7f08004a;
+        public static final int address_title=0x7f08004b;
+        public static final int advisor=0x7f080060;
         public static final int always=0x7f08000f;
         public static final int beginning=0x7f08000a;
-        public static final int blood=0x7f080053;
-        public static final int blood_title=0x7f080052;
+        public static final int blood=0x7f080056;
+        public static final int blood_title=0x7f080057;
         public static final int checkbox=0x7f080036;
-        public static final int club=0x7f080054;
+        public static final int club=0x7f080059;
+        public static final int club_title=0x7f08005a;
         public static final int collapseActionView=0x7f080011;
-        public static final int contact_header=0x7f080046;
+        public static final int committee=0x7f080061;
+        public static final int dc=0x7f080062;
         public static final int default_activity_button=0x7f080031;
+        public static final int dg_team=0x7f08005f;
         public static final int dialog=0x7f080012;
         public static final int disableHome=0x7f080008;
-        public static final int divider_contact=0x7f080047;
+        public static final int divider_contact=0x7f080049;
+        public static final int divider_contact2=0x7f08004c;
+        public static final int divider_contact3=0x7f08004f;
+        public static final int divider_contact4=0x7f080052;
+        public static final int divider_contact5=0x7f080055;
+        public static final int divider_contact6=0x7f080058;
         public static final int dropdown=0x7f080013;
         public static final int edit_query=0x7f080039;
-        public static final int email=0x7f080051;
-        public static final int email_title=0x7f080050;
+        public static final int email=0x7f080053;
+        public static final int email_title=0x7f080054;
         public static final int end=0x7f08000c;
         public static final int expand_activities_button=0x7f08002f;
         public static final int expanded_menu=0x7f080035;
@@ -976,18 +986,17 @@ containing a value of this type.
         public static final int listMode=0x7f080001;
         public static final int listVew=0x7f080018;
         public static final int list_item=0x7f080032;
-        public static final int location=0x7f080055;
         public static final int middle=0x7f08000b;
-        public static final int mobile=0x7f08004f;
-        public static final int mobile_title=0x7f08004e;
-        public static final int name=0x7f080049;
+        public static final int mobile=0x7f080050;
+        public static final int mobile_title=0x7f080051;
+        public static final int name=0x7f080047;
         public static final int name_title=0x7f080048;
         public static final int never=0x7f08000d;
         public static final int none=0x7f080009;
         public static final int normal=0x7f080000;
         public static final int phone=0x7f08004d;
-        public static final int phone_title=0x7f08004c;
-        public static final int president=0x7f080058;
+        public static final int phone_title=0x7f08004e;
+        public static final int president=0x7f08005d;
         public static final int progress_circular=0x7f080019;
         public static final int progress_horizontal=0x7f08001a;
         public static final int radio=0x7f080038;
@@ -1009,7 +1018,7 @@ containing a value of this type.
         public static final int search_plate=0x7f08003f;
         public static final int search_src_text=0x7f080040;
         public static final int search_voice_btn=0x7f080044;
-        public static final int secratary=0x7f080057;
+        public static final int secratary=0x7f08005c;
         public static final int shortcut=0x7f080037;
         public static final int showCustom=0x7f080007;
         public static final int showHome=0x7f080004;
@@ -1023,7 +1032,7 @@ containing a value of this type.
         public static final int up=0x7f08002a;
         public static final int useLogo=0x7f080003;
         public static final int withText=0x7f080010;
-        public static final int z_chairman=0x7f080059;
+        public static final int z_chairman=0x7f08005e;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f0a0000;

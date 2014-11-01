@@ -31,7 +31,7 @@ public class FileParse {
                 }
             }
             for (int i = 0; i < list.size(); i++) {
-                if (UtilityString.caseIgnoredContains(list.get(i)[3], searchString)) {
+                if (UtilityString.caseIgnoredContains(list.get(i)[2], searchString)) {
                     result.add(list.get(i));
                 }
             }

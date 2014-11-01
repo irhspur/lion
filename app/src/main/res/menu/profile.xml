@@ -17,7 +17,23 @@
             />
         <item
             android:id="@+id/z_chairman"
-            android:title="Zone Chairman"
+            android:title="Chairman"
+            />
+        <item
+            android:id="@+id/dg_team"
+            android:title="Distric Governor Team"
+            />
+        <item
+            android:id="@+id/advisor"
+            android:title="Advisor"
+            />
+        <item
+            android:id="@+id/committee"
+            android:title="Committee"
+            />
+        <item
+            android:id="@+id/dc"
+            android:title="Distric Chairperson"
             />
     </group>
 </menu>

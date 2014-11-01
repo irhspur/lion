@@ -49,8 +49,11 @@ public class SearchResult extends ListActivity {
             result = FileParse.getString(searchString, csvStreamReader); //Parse the file to populate List<String[]>
 
             for (int i=0; i < result.size(); i++) {
-                populate.add(result.get(i)[3]); //populate names
+                populate.add(result.get(i)[2]); //populate names
             }
+
+            if(populate.size() < 1) //for no search results
+                populate.add("No search results found for \"" + searchString +"\"");
 
             final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, populate); //list out names
             setListAdapter(adapter);
