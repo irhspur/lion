@@ -1040,7 +1040,7 @@ containing a value of this type.
         public static final int top_action_bar=0x7f080029;
         public static final int up=0x7f08002a;
         public static final int useLogo=0x7f080003;
-        public static final int webview=0x7f080048;
+        public static final int webViewPlaceHolder=0x7f080048;
         public static final int withText=0x7f080010;
         public static final int z_chairman=0x7f080063;
     }
