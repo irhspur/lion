@@ -1,7 +1,10 @@
 package phonedirectory.lion.com.lion;
 
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
@@ -29,6 +32,8 @@ public class Profile extends ActionBarActivity {
 
     TextView name, address, phone, club, blood, email, mobile, location;
     ImageButton addToContacts, call;
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +115,17 @@ public class Profile extends ActionBarActivity {
             // action with ID action_refresh was selected
             case R.id.action_search:
                 onSearchRequested();
+                break;
+            case R.id.newsletter:
+                String pdf = "http://lionsclubs325b1.org/slideshow/9181news%20letter-september.pdf";
+                callIntentById( "https://docs.google.com/viewer?url=" + pdf);
+                break;
+            case R.id.website:
+                callIntentById("http://lionsclubs325b1.org");
+                break;
+            case R.id.int_website:
+                callIntentById("http://www.lionsclubs.org");
+                break;
             default:
                 break;
         }
@@ -129,6 +145,29 @@ public class Profile extends ActionBarActivity {
 
     }
 
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+        if (ni == null) {
+            // There are no active networks.
+            return false;
+        } else
+            return true;
+    }
+
+    private void callIntentById(String url){
+        if(isNetworkConnected()) {
+
+            Intent openNewsletter = new Intent(context, Newsletter.class);
+            openNewsletter.putExtra("url", url);
+            startActivity(openNewsletter);
+        }
+        else{
+            Toast t = Toast.makeText(getApplicationContext(), "You are not connected to the internet", Toast.LENGTH_LONG);
+            t.show();
+            t.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+        }
+    }
     @Override
     public void onPause(){
         super.onPause();

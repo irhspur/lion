@@ -951,12 +951,12 @@ containing a value of this type.
         public static final int action_menu_presenter=0x7f080016;
         public static final int action_mode_close_button=0x7f08002d;
         public static final int action_search=0x7f080060;
-        public static final int action_settings=0x7f080068;
+        public static final int action_settings=0x7f08006b;
         public static final int activity_chooser_view_content=0x7f08002e;
         public static final int add_to_contacts=0x7f080055;
         public static final int address=0x7f08004d;
         public static final int address_title=0x7f08004e;
-        public static final int advisor=0x7f080065;
+        public static final int advisor=0x7f080066;
         public static final int always=0x7f08000f;
         public static final int beginning=0x7f08000a;
         public static final int blood=0x7f08005b;
@@ -966,10 +966,10 @@ containing a value of this type.
         public static final int club=0x7f08005e;
         public static final int club_title=0x7f08005f;
         public static final int collapseActionView=0x7f080011;
-        public static final int committee=0x7f080066;
-        public static final int dc=0x7f080067;
+        public static final int committee=0x7f080067;
+        public static final int dc=0x7f080068;
         public static final int default_activity_button=0x7f080031;
-        public static final int dg_team=0x7f080064;
+        public static final int dg_team=0x7f080065;
         public static final int dialog=0x7f080012;
         public static final int directory=0x7f080046;
         public static final int disableHome=0x7f080008;
@@ -991,6 +991,7 @@ containing a value of this type.
         public static final int icon=0x7f080033;
         public static final int ifRoom=0x7f08000e;
         public static final int image=0x7f080030;
+        public static final int int_website=0x7f08006a;
         public static final int listMode=0x7f080001;
         public static final int listVew=0x7f080018;
         public static final int list_item=0x7f080032;
@@ -1005,7 +1006,7 @@ containing a value of this type.
         public static final int normal=0x7f080000;
         public static final int phone=0x7f080050;
         public static final int phone_title=0x7f080051;
-        public static final int president=0x7f080062;
+        public static final int president=0x7f080063;
         public static final int progress_circular=0x7f080019;
         public static final int progress_horizontal=0x7f08001a;
         public static final int radio=0x7f080038;
@@ -1024,10 +1025,11 @@ containing a value of this type.
         public static final int search_edit_frame=0x7f08003d;
         public static final int search_go_btn=0x7f080043;
         public static final int search_mag_icon=0x7f08003e;
+        public static final int search_option=0x7f080061;
         public static final int search_plate=0x7f08003f;
         public static final int search_src_text=0x7f080040;
         public static final int search_voice_btn=0x7f080044;
-        public static final int secratary=0x7f080061;
+        public static final int secratary=0x7f080062;
         public static final int shortcut=0x7f080037;
         public static final int showCustom=0x7f080007;
         public static final int showHome=0x7f080004;
@@ -1041,8 +1043,9 @@ containing a value of this type.
         public static final int up=0x7f08002a;
         public static final int useLogo=0x7f080003;
         public static final int webViewPlaceHolder=0x7f080048;
+        public static final int website=0x7f080069;
         public static final int withText=0x7f080010;
-        public static final int z_chairman=0x7f080063;
+        public static final int z_chairman=0x7f080064;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f0a0000;

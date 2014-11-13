@@ -1,6 +1,7 @@
 package phonedirectory.lion.com.lion;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,11 +19,16 @@ public class Newsletter extends Activity {
 
     protected FrameLayout placeHolder;
     protected WebView webview;
+    protected String url;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsletter);
+
+        Intent intent = getIntent();
+        url = (String) intent.getExtras().get("url");
 
         initializeUI();
     }
@@ -34,10 +40,10 @@ public class Newsletter extends Activity {
         if(webview == null) {
             webview = new WebView(this);
 
-            webview.getSettings().setJavaScriptEnabled(true);
+//            webview.getSettings().setJavaScriptEnabled(true);
 
-            String pdf = "http://lionsclubs325b1.org/slideshow/9181news%20letter-september.pdf";
-            webview.loadUrl("https://docs.google.com/viewer?url=" + pdf);
+
+            webview.loadUrl(url);
         }
 
         placeHolder.addView(webview);
